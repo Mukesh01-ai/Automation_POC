@@ -25,6 +25,10 @@ pipeline {
       }
     }
   }
+  
+  stage('generate'){
+	sh'mvn clean'
+  }
 
   post {
     always {
