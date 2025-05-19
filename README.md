@@ -1,24 +1,24 @@
-# 📚 Bookstore API Automation with CI/CD Integration
+#Bookstore API Automation with CI/CD Integration
 
 End-to-end API automation framework for a Bookstore API using Cucumber BDD, TestNG, and Java 18, with seamless CI/CD integration.
 
-## 💻 Tech Stack
+##Tech Stack
 
 | Component | Description |
 |-----------|-------------|
-| 🧠 IDE | IntelliJ IDEA or any Java-compatible IDE |
-| ☕ Language | Java 18 |
-| 🔄 Framework | RestAssured + Cucumber BDD for behavior-driven API testing |
-| 🛠 Build Tool | Maven for dependency management and CI/CD integration |
-| ✅ Test Runner | TestNG for test execution, parallel runs, and retries |
+| IDE | IntelliJ IDEA or any Java-compatible IDE |
+| Language | Java 18 |
+| Framework | RestAssured + Cucumber BDD for behavior-driven API testing |
+| Build Tool | Maven for dependency management and CI/CD integration |
+| Test Runner | TestNG for test execution, parallel runs, and retries |
 
-## 🧪 Why This Stack?
+##Why This Stack?
 
 - **TestNG**: Supports retries, parallel execution, and CI/CD integration, ideal for non-Spring Boot projects
 - **Cucumber BDD**: Enables human-readable test cases for better collaboration between technical and non-technical stakeholders
 - **RestAssured**: Simplifies API testing with a fluent interface and powerful assertion capabilities
 
-## 📋 Prerequisites
+##Prerequisites
 
 ### Java 18
 - Ensure Java 18 is installed (Oracle JDK 18 or OpenJDK 18)
@@ -40,7 +40,7 @@ End-to-end API automation framework for a Bookstore API using Cucumber BDD, Test
 - IntelliJ IDEA or Eclipse for easier project management
 - Postman for manual API testing and validation
 
-## 🚀 Setup and Running Test Cases
+##Setup and Running Test Cases
 
 ### 1. Clone the Repository
 
@@ -85,7 +85,7 @@ mvn test
 - `GET /books`: Fetch all books
 - `DELETE /books/{id}`: Delete a book
 
-## ⚠️ Troubleshooting
+##Troubleshooting
 
 - **Test Failure**: If tests fail due to status line mismatches (e.g., `HTTP/1.1 422 Unprocessable Content`), ensure `UserStepDefs.java` asserts the correct status codes (e.g., 422). This has been fixed in the latest version.
 - **Java Version Issue**: Verify `JAVA_HOME` points to Java 18 installation.
@@ -94,7 +94,7 @@ mvn test
   mvn test -e -X
   ```
 
-## 🛠 CI/CD Integration
+##CI/CD Integration
 
 ### Prerequisites
 - **Jenkins**: Install locally with plugins (Git, GitHub, Pipeline, Maven)
@@ -168,12 +168,12 @@ pipeline {
 - Commit changes to the repository
 - The Dev job builds, then triggers the QA job to run tests
 
-## 📝 Important Notes
+##Important Notes
 - Ensure Java 18 is used consistently (`JAVA_HOME` and `pom.xml`)
 - For production CI/CD, use a public Jenkins server instead of Ngrok
 - SSH authentication is recommended for cloning; use HTTPS if SSH keys are not set up
 
 ---
 
-## 📊 Test Coverage & Reporting
+##Test Coverage & Reporting
 Test reports are available after execution in the `target/cucumber-reports` directory.

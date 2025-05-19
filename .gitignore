@@ -40,3 +40,4 @@ build/
 
 #AllureReports
 allure-results/
+/bin/
