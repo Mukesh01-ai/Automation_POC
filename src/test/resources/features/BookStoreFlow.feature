@@ -32,10 +32,6 @@
       Then verify the book details should not be fetched properly in the response for deleted book id
 
 
-
-
-
-
     @EditBookDetails @AuthenticationVerificationForEditApi
     Scenario: Edit the created Book Details and on every field and validate them in fetching book details response
 
